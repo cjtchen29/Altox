@@ -1,0 +1,86 @@
+# 去广告规则集 — Alto X / Surge 共用
+# 拦截常见广告与追踪域名（广告联盟、统计分析、应用内广告 SDK）
+# 用法：在 Surge 或 Alto X 配置的 [Rule] 里加一行（策略由引用处定，文件本身不带策略列）：
+# RULE-SET,https://<host>/ads-reject.list,REJECT
+# 注意：Alto X 的远程规则集加载尚未在手机上验证过（本地规则已验证生效），
+# 上线前须先在手机上确认 RULE-SET 能下载展开；Surge 侧 RULE-SET 是常规用法。
+# 注意：拦截过严可能导致个别 App/网页功能异常（如登录、支付页打不开），
+# 遇到先把那个域名告诉我，从列表里去掉；不要整段删掉。
+# Google 广告与统计
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,googleadservices.com
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN-SUFFIX,googletagmanager.com
+DOMAIN-SUFFIX,googletagservices.com
+DOMAIN-SUFFIX,2mdn.net
+DOMAIN-SUFFIX,admob.com
+# Meta / Facebook 广告
+DOMAIN-SUFFIX,connect.facebook.net
+# Amazon 广告
+DOMAIN-SUFFIX,amazon-adsystem.com
+# Microsoft 广告与统计
+DOMAIN-SUFFIX,bat.bing.com
+DOMAIN-SUFFIX,clarity.ms
+# 通用广告联盟
+DOMAIN-SUFFIX,criteo.com
+DOMAIN-SUFFIX,criteo.net
+DOMAIN-SUFFIX,adsrvr.org
+DOMAIN-SUFFIX,outbrain.com
+DOMAIN-SUFFIX,taboola.com
+DOMAIN-SUFFIX,moatads.com
+DOMAIN-SUFFIX,scorecardresearch.com
+DOMAIN-SUFFIX,quantserve.com
+DOMAIN-SUFFIX,adnxs.com
+DOMAIN-SUFFIX,rubiconproject.com
+DOMAIN-SUFFIX,pubmatic.com
+DOMAIN-SUFFIX,openx.net
+DOMAIN-SUFFIX,advertising.com
+DOMAIN-SUFFIX,ads.yahoo.com
+DOMAIN-SUFFIX,adtechus.com
+DOMAIN-SUFFIX,smartadserver.com
+DOMAIN-SUFFIX,casalemedia.com
+DOMAIN-SUFFIX,lijit.com
+DOMAIN-SUFFIX,360yield.com
+DOMAIN-SUFFIX,tribalfusion.com
+DOMAIN-SUFFIX,exoclick.com
+DOMAIN-SUFFIX,popads.net
+DOMAIN-SUFFIX,adcash.com
+DOMAIN-SUFFIX,propellerads.com
+# 统计分析
+DOMAIN-SUFFIX,hotjar.com
+DOMAIN-SUFFIX,mixpanel.com
+DOMAIN-SUFFIX,amplitude.com
+DOMAIN-SUFFIX,segment.com
+DOMAIN-SUFFIX,fullstory.com
+DOMAIN-SUFFIX,heapanalytics.com
+# 应用内广告 SDK
+DOMAIN-SUFFIX,applovin.com
+DOMAIN-SUFFIX,unityads.unity3d.com
+DOMAIN-SUFFIX,ironsource.com
+DOMAIN-SUFFIX,vungle.com
+DOMAIN-SUFFIX,chartboost.com
+DOMAIN-SUFFIX,inmobi.com
+DOMAIN-SUFFIX,tapjoy.com
+DOMAIN-SUFFIX,adcolony.com
+DOMAIN-SUFFIX,fyber.com
+DOMAIN-SUFFIX,smaato.com
+DOMAIN-SUFFIX,startapp.com
+DOMAIN-SUFFIX,airpush.com
+DOMAIN-SUFFIX,mopub.com
+# 视频广告
+DOMAIN-SUFFIX,freewheel.tv
+DOMAIN-SUFFIX,springserve.com
+DOMAIN-SUFFIX,aniview.com
+DOMAIN-SUFFIX,lkqd.net
+# 国内广告
+DOMAIN-SUFFIX,tanx.com
+DOMAIN-SUFFIX,alimama.com
+DOMAIN-SUFFIX,atanx.alicdn.com
+DOMAIN-SUFFIX,cpro.baidu.com
+DOMAIN-SUFFIX,pos.baidu.com
+DOMAIN-SUFFIX,hm.baidu.com
+DOMAIN-SUFFIX,e.qq.com
+DOMAIN-SUFFIX,ads.oceanengine.com
+DOMAIN-SUFFIX,ad.xiaomi.com
+DOMAIN-SUFFIX,sax.weibo.com

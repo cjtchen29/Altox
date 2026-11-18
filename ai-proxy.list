@@ -29,6 +29,11 @@ DOMAIN-SUFFIX,claude.com
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,claudemcpcontent.com
+# Muse / Meta（Meta 个人 AI 助手，muse.ai）
+DOMAIN-SUFFIX,muse.ai
+DOMAIN-SUFFIX,metaaiusercontent.com
+DOMAIN-SUFFIX,ecto1usercontent.com
+DOMAIN-SUFFIX,meta-agents-apps.workers.dev
 # 其他
 DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-SUFFIX,meta.ai
