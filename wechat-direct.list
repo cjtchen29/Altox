@@ -1,16 +1,54 @@
 # WeChat 直连规则集 — Alto X / Surge 共用
-# 域名 4 条 + 腾讯 IP 段 6 条（均为香港注册 IP，GEOIP,CN 盖不到，FINAL 会落到代理；实验 exp1 临时摘掉 43.175、101.32 两段，复现完恢复）
+# 域名 5 条 + 精确 IP 38 条（/32；2026-11-23 从 9 条 /16 整段收紧，Hui 决定）
+# IP 来源：ConnersHua WeChat.list 的 17 个 /32 + 2026-11-23 当天 0.9.224 设备日志里实际出现的 21 个 /32
+# （43.175.230.138、43.133.62.133 等 ConnersHua 里没有，单贴 ConnersHua 会丢 coverage）
+# 域名 wechat.com 从 ConnersHua 补进（与 Alto X 内联组一致）
+# 均为香港注册 IP，GEOIP,CN 盖不到，FINAL 会落到代理；49.51 不用写（国内注册，GEOIP 能盖到）
+# 旧版 9 条 /16 见 git 历史（exp1 前版本）与本地备份 ~/workspace/qx-like-app/rulesets/wechat-direct.list
 # 用法：在 Surge 或 Alto X 配置的 [Rule] 里加一行（策略由引用处定，文件本身不带策略列）：
-# RULE-SET,https://<host>/wechat-direct.list,DIRECT
+# RULE-SET,https://raw.githubusercontent.com/cjtchen29/Altox/main/wechat-direct.list,DIRECT
 # 注意：Alto X 的远程规则集加载尚未在手机上验证过（本地规则已验证生效），
 # 上线前须先在手机上确认 RULE-SET 能下载展开；Surge 侧 RULE-SET 是常规用法。
 DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,qpic.cn
 DOMAIN-SUFFIX,qq.com
 DOMAIN-SUFFIX,tencent.com
-IP-CIDR,43.129.0.0/16,no-resolve
-IP-CIDR,43.130.0.0/16,no-resolve
-IP-CIDR,43.134.0.0/16,no-resolve
-IP-CIDR,43.135.0.0/16,no-resolve
-IP-CIDR,43.156.0.0/16,no-resolve
-IP-CIDR,43.160.0.0/16,no-resolve
+DOMAIN-SUFFIX,wechat.com
+IP-CIDR,43.156.222.113/32,no-resolve
+IP-CIDR,43.156.222.152/32,no-resolve
+IP-CIDR,43.156.222.176/32,no-resolve
+IP-CIDR,43.156.222.205/32,no-resolve
+IP-CIDR,43.156.223.202/32,no-resolve
+IP-CIDR,43.156.255.184/32,no-resolve
+IP-CIDR,101.32.104.4/32,no-resolve
+IP-CIDR,101.32.104.41/32,no-resolve
+IP-CIDR,101.32.104.56/32,no-resolve
+IP-CIDR,101.32.104.104/32,no-resolve
+IP-CIDR,101.32.118.25/32,no-resolve
+IP-CIDR,101.32.133.16/32,no-resolve
+IP-CIDR,101.32.133.53/32,no-resolve
+IP-CIDR,101.32.133.209/32,no-resolve
+IP-CIDR,129.226.3.47/32,no-resolve
+IP-CIDR,129.226.107.59/32,no-resolve
+IP-CIDR,129.226.107.244/32,no-resolve
+IP-CIDR,43.175.230.137/32,no-resolve
+IP-CIDR,43.175.230.138/32,no-resolve
+IP-CIDR,43.175.230.151/32,no-resolve
+IP-CIDR,43.133.62.133/32,no-resolve
+IP-CIDR,43.160.156.8/32,no-resolve
+IP-CIDR,43.160.156.39/32,no-resolve
+IP-CIDR,43.160.156.47/32,no-resolve
+IP-CIDR,43.160.156.69/32,no-resolve
+IP-CIDR,43.160.156.168/32,no-resolve
+IP-CIDR,43.160.156.175/32,no-resolve
+IP-CIDR,43.160.156.193/32,no-resolve
+IP-CIDR,43.160.156.207/32,no-resolve
+IP-CIDR,101.32.139.109/32,no-resolve
+IP-CIDR,43.144.112.196/32,no-resolve
+IP-CIDR,43.152.112.101/32,no-resolve
+IP-CIDR,43.159.158.88/32,no-resolve
+IP-CIDR,43.159.158.242/32,no-resolve
+IP-CIDR,60.6.0.225/32,no-resolve
+IP-CIDR,60.6.0.226/32,no-resolve
+IP-CIDR,116.130.224.150/32,no-resolve
+IP-CIDR,116.130.224.205/32,no-resolve
